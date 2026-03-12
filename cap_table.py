@@ -731,7 +731,7 @@ else:
 # --- Box 3 risk-adjusted variables ---
 # Risk-adjusted proceeds at the breakeven exit (i.e. what raise & sell is worth
 # in expected value terms, given the founder's own risk estimate)
-risk_adjusted_proceeds = desired * (1 - risk_pct)   # desired == sell_today proceeds at pre_money
+risk_adjusted_proceeds = desired /(1 + risk_pct)   # desired == sell_today proceeds at pre_money
 
 # The gap: how much worse off the founder is in expected value terms
 # even if the raise & sell hits its breakeven exit exactly
@@ -1282,4 +1282,5 @@ if st.session_state.show_email_form:
 #             "Difference (M)": difference_vals / 1e6,
 #         })
 #         st.dataframe(chart3_df, use_container_width=True)
+
   
